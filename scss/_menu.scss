@@ -43,7 +43,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.8;
+  opacity: 1;
   visibility: hidden;
 
   &.show {
@@ -87,10 +87,10 @@
     }
 
     .portrait {
-      width: 350px;
+      width: 257px;
       height: 350px;
-      background: url("../img/logo.png");
-      border: solid 3px $secondary-color;
+      background: url("../img/logo.jpg");
+      border: solid 4px $secondary-color;
     }
   }
   .nav-item {
