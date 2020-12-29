@@ -18,18 +18,24 @@ body {
 // headings
 
 h1,
-h2,
-h3 {
+h2 {
   margin: 0;
   font-weight: 400;
   &.lg-heading {
     font-size: 3rem;
   }
   &.sm-heading {
+    font-size: 2rem;
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    color: #fff;
+    //padding: 0.2rem 1rem;
+    //background: rgba(lighten($primary-color, 2), 0.5);
   }
+}
+h3 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 
 p {
@@ -73,21 +79,6 @@ main {
     h1 {
       margin-top: 20vh;
     }
-  }
-}
-
-.home-info {
-  display: flex;
-  -ms-grid-row-align: center;
-  width: 100%;
-
-  .home-model {
-    margin: auto;
-    width: 600px;
-    height: 400px;
-  }
-  .home-list {
-    text-align: left;
   }
 }
 

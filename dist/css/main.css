@@ -111,7 +111,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.7); }
+      background: rgba(68, 68, 68, 0.3); }
   body#bg-img2 {
     background: url(../img/rockwall.JPG);
     background-attachment: scroll;
@@ -124,23 +124,51 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.7); }
+      background: rgba(68, 68, 68, 0.8); }
+  body#bg-img3 {
+    background: url(../img/workimg.JPG);
+    background-attachment: scroll;
+    background-size: cover; }
+    body#bg-img3:after {
+      content: "";
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.8); }
+  body#bg-img4 {
+    background: url(../img/contactimg.JPG);
+    background-attachment: scroll;
+    background-size: cover; }
+    body#bg-img4:after {
+      content: "";
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.8); }
 
 h1,
-h2,
-h3 {
+h2 {
   margin: 0;
   font-weight: 400; }
   h1.lg-heading,
-  h2.lg-heading,
-  h3.lg-heading {
+  h2.lg-heading {
     font-size: 3rem; }
   h1.sm-heading,
-  h2.sm-heading,
-  h3.sm-heading {
+  h2.sm-heading {
+    font-size: 2rem;
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    color: #fff; }
+
+h3 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.5rem; }
 
 p {
   font-size: 1.25rem; }
@@ -171,17 +199,6 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
-
-.home-info {
-  display: flex;
-  -ms-grid-row-align: center;
-  width: 100%; }
-  .home-info .home-model {
-    margin: auto;
-    width: 600px;
-    height: 400px; }
-  .home-info .home-list {
-    text-align: left; }
 
 .about-info {
   display: grid;
@@ -262,11 +279,41 @@ main {
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .home-info {
+    display: flex;
+    -ms-grid-row-align: center;
+    width: 100%; }
+    .home-info .home-model {
+      margin: auto;
+      width: 600px;
+      height: 400px;
+      margin-right: 1rem;
+      margin-top: 1rem; }
+    .home-info .home-list {
+      text-align: left;
+      font-size: 1.2rem;
+      background: rgba(73, 73, 73, 0.5);
+      margin-left: 0.1rem; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .home-info {
+    display: flex;
+    -ms-grid-row-align: center;
+    width: 100%; }
+    .home-info .home-model {
+      margin: auto;
+      width: 600px;
+      height: 400px;
+      margin-right: 1rem;
+      margin-top: 1rem; }
+    .home-info .home-list {
+      text-align: left;
+      font-size: 1.2rem;
+      background: rgba(73, 73, 73, 0.5);
+      margin-left: 0.1rem; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -298,10 +345,30 @@ main {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .home-info {
+    grid-template-areas: "home-model" "home-list";
+    grid-template-columns: 1fr;
+    align-items: center;
+    width: 100%;
+    -ms-grid-row-align: center;
+    display: block; }
+    .home-info .home-model {
+      width: 300px;
+      height: 200px; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .home-info {
+    grid-template-areas: "home-model" "home-list";
+    grid-template-columns: 1fr;
+    align-items: center;
+    width: 100%;
+    display: block;
+    -ms-grid-row-align: center; }
+    .home-info .home-model {
+      width: 300px;
+      height: 200px; } }

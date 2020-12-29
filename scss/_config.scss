@@ -4,7 +4,12 @@ $show-home-image: true;
 $home-image: url(../img/background.JPG);
 $show-about-image: true;
 $about-image: url(../img/rockwall.JPG);
-$background-opacity: 0.7;
+$show-work-image: true;
+$work-image: url(../img/workimg.JPG);
+$show-contact-image: true;
+$contact-image: url(../img/contactimg.JPG);
+$background-opacity: 0.3;
+$background-opacity2: 0.8;
 
 @mixin easeout {
   transition: all 1s ease-out;
@@ -43,7 +48,43 @@ $background-opacity: 0.7;
         width: 100%;
         height: 100%;
         z-index: -1;
-        background: rgba($primary-color, $background-opacity);
+        background: rgba($primary-color, $background-opacity2);
+      }
+    }
+  }
+  @if $show-work-image {
+    &#bg-img3 {
+      background: $work-image;
+      background-attachment: scroll;
+      background-size: cover;
+
+      &:after {
+        content: "";
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba($primary-color, $background-opacity2);
+      }
+    }
+  }
+  @if $show-contact-image {
+    &#bg-img4 {
+      background: $contact-image;
+      background-attachment: scroll;
+      background-size: cover;
+
+      &:after {
+        content: "";
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba($primary-color, $background-opacity2);
       }
     }
   }
